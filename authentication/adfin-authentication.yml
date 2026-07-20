@@ -1,0 +1,36 @@
+generated: '2026-07-17'
+method: searched
+source: https://developer.adfin.com/products/direct-integration/guides/get-started/authentication.md
+docs: https://developer.adfin.com/products/direct-integration/guides/get-started/authentication.md
+summary:
+  types: [oauth2]
+  oauth2_flows: [clientCredentials, authorizationCode]
+  api_key_in: []
+  notes: >-
+    The Adfin API uses OAuth 2.0. Platform-to-platform integrations use the
+    client-credentials flow; biller authorization uses the authorization-code
+    flow. App credentials (client_id + client_secret) are issued by an Adfin
+    Integration Manager and presented as HTTP Basic auth against the API's own
+    token endpoint (Basic base64(client_id:client_secret)). This is distinct
+    from the Auth0-backed end-user identity at auth.adfin.com used by the
+    console.
+schemes:
+  - name: oauth2_client_credentials
+    type: oauth2
+    flow: clientCredentials
+    tokenUrl: https://api.adfin.com/api/oauth2/token
+    tokenUrl_staging: https://api.staging.adfin.com/api/oauth2/token
+    client_auth: basic
+    use: platform-to-platform integrations
+    sources: [docs]
+  - name: oauth2_authorization_code
+    type: oauth2
+    flow: authorizationCode
+    use: biller authorization (a platform acting on behalf of a biller)
+    sources: [docs]
+  - name: auth0_openid_connect
+    type: openIdConnect
+    openIdConnectUrl: https://auth.adfin.com/.well-known/openid-configuration
+    issuer: https://auth.adfin.com/
+    use: console / end-user identity (Auth0)
+    sources: [well-known/adfin-auth-openid-configuration.json]
