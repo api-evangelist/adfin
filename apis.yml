@@ -1,20 +1,64 @@
 aid: adfin
 name: Adfin
-description: 'Adfin is a company surfaced as a portfolio company of index-ventures and added to the API
-  Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Adfin is a London-based fintech that combines payment collection and
+  AI-powered credit control so businesses get paid faster. Its developer
+  platform exposes invoicing, payments and credit-control APIs — create and
+  activate invoices, issue payment requests with hosted payment pages, set up
+  direct-debit mandates, and reconcile payments — plus signed webhooks for
+  real-time invoice, mandate and payment events. Authentication is OAuth 2.0
+  (client-credentials for platforms, authorization-code for biller
+  authorization), with an official Node.js SDK and a first-party MCP server for
+  agent-driven invoicing. Adfin is a portfolio company of Index Ventures.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://assets.adfin.com/frontend-resources/favicon/web-app-manifest-512x512.png
 url: https://raw.githubusercontent.com/api-evangelist/adfin/refs/heads/main/apis.yml
 x-type: company
 x-source: index-ventures-portfolio
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enrichment-pipeline
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
 - Fintech
-apis: []
+- Payments
+- Invoicing
+- Credit Control
+- Direct Debit
+- Billing
+- Accounts Receivable
+- United Kingdom
+apis:
+- name: Adfin API
+  description: >-
+    Invoicing, payments and credit-control API — customers, invoices, payment
+    requests, direct-debit mandates, payments and signed webhooks.
+  humanURL: https://developer.adfin.com/docs/welcome
+  baseURL: https://api.adfin.com
+  properties:
+  - type: Documentation
+    url: https://developer.adfin.com/docs/welcome
+  - type: APIReference
+    url: https://developer.adfin.com/reference/welcome-1
+  - type: GettingStarted
+    url: https://developer.adfin.com/products/direct-integration/guides/get-started/1_get-access
+  - type: Authentication
+    url: authentication/adfin-authentication.yml
+  - type: Webhooks
+    url: asyncapi/adfin-webhooks.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -22,4 +66,56 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://adfin.com
+  url: https://adfin.com
+- type: DeveloperPortal
+  url: https://developer.adfin.com/
+- type: Documentation
+  url: https://developer.adfin.com/docs/welcome
+- type: APIReference
+  url: https://developer.adfin.com/reference/welcome-1
+- type: GettingStarted
+  url: https://developer.adfin.com/products/direct-integration/guides/get-started/1_get-access
+- type: Support
+  url: https://support.adfin.com/en/
+- type: Blog
+  url: https://adfin.com/blog
+- type: ChangeLog
+  url: https://developer.adfin.com/changelog
+- type: GitHubOrganization
+  url: https://github.com/Adfin-Engineering
+- type: Pricing
+  url: https://adfin.com/pricing
+- type: SignUp
+  url: https://console.adfin.com/auth/signup
+- type: Login
+  url: https://console.adfin.com/auth/login
+- type: TermsOfService
+  url: https://adfin.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://adfin.com/privacy-policy
+- type: Authentication
+  url: authentication/adfin-authentication.yml
+- type: Conventions
+  url: conventions/adfin-conventions.yml
+- type: Idempotency
+  url: conventions/adfin-conventions.yml
+- type: Webhooks
+  url: asyncapi/adfin-webhooks.yml
+- type: Packages
+  url: packages/adfin-packages.yml
+- type: SDKs
+  url: packages/adfin-packages.yml
+- type: MCPServer
+  url: mcp/adfin-mcp.yml
+- type: LLMsTxt
+  url: llms/adfin-llms.txt
+- type: WellKnown
+  url: well-known/adfin-well-known.yml
+- type: Sandbox
+  url: sandbox/adfin-sandbox.yml
+- type: DataModel
+  url: data-model/adfin-data-model.yml
+- type: Conformance
+  url: conformance/adfin-conformance.yml
+- type: DomainSecurity
+  url: security/adfin-domain-security.yml
