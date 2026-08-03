@@ -1,0 +1,43 @@
+generated: '2026-07-17'
+method: searched
+source: https://developer.adfin.com/docs/welcome
+docs: https://developer.adfin.com/products/direct-integration/guides/
+authentication:
+  style: oauth2
+  detail: >-
+    OAuth 2.0 client-credentials (platform-to-platform) and authorization-code
+    (biller authorization) flows; bearer access token on API calls. See
+    authentication/adfin-authentication.yml.
+idempotency:
+  supported: true
+  detail: >-
+    Adfin documents idempotent write operations for invoice creation and
+    activation (POST /invoices, PUT /invoices/activate) so that create/activate
+    calls can be safely retried without duplicating invoices or payment
+    collection. Confirmed in the invoice integration guides.
+  source: https://developer.adfin.com/products/direct-integration/guides/adfin-core/payment-request-guide.md
+pagination:
+  supported: true
+  detail: >-
+    List/collection endpoints (e.g. payment requests, invoices) support
+    filtering and pagination per the Adfin Core resource guides.
+webhooks:
+  supported: true
+  detail: >-
+    Outbound webhooks with a shared-secret signature and an adfin-webhook-type
+    header; retry logic on failed delivery. See asyncapi/adfin-webhooks.yml.
+  signature: shared-secret, HMAC signature verification required before processing
+error_handling:
+  detail: >-
+    Standard HTTP status codes; documentation recommends validating webhook
+    signatures and logging events for audit trails. A structured RFC 9457
+    problem+json envelope was not confirmed from public docs (no public OpenAPI).
+versioning:
+  detail: >-
+    API documentation references retiring older API versions (1.0.0 / 1.1.0)
+    over time; no formal public deprecation policy page was found.
+related:
+  authentication: authentication/adfin-authentication.yml
+  webhooks: asyncapi/adfin-webhooks.yml
+  sandbox: sandbox/adfin-sandbox.yml
+  data_model: data-model/adfin-data-model.yml

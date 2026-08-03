@@ -1,0 +1,47 @@
+generated: '2026-07-17'
+method: searched
+source: https://developer.adfin.com/products/direct-integration/guides/get-started/test-payments.md
+environments:
+  staging:
+    base_url: https://api.staging.adfin.com
+    console: https://staging.adfin.com
+    token_url: https://api.staging.adfin.com/api/oauth2/token
+  live:
+    base_url: https://api.adfin.com
+    token_url: https://api.adfin.com/api/oauth2/token
+mode_separation: >-
+  Test credentials below only work in the staging environment. The docs warn
+  that in staging the Pay-by-Bank method still processes REAL payments, so use
+  the published test cards / direct-debit accounts rather than a real bank.
+test_cards:
+  - region: GB (accounts created before September 2025)
+    number: "4444 3333 2222 1111"
+    expiry: "03/30"
+    cvv: "737"
+  - region: GB (accounts created after September 2025)
+    number: "4000 0566 5566 5556"
+    expiry: "03/30"
+    cvv: "737"
+  - region: Guernsey
+    number: "4444 3333 2222 1111"
+    expiry: "03/30"
+    cvv: "737"
+  - scenario: 3DS authentication
+    number: "4000 0084 0560 0003"
+  - scenario: CVC failure
+    number: "4000 0000 0000 0101"
+  - scenario: always blocked
+    number: "4100 0000 0000 0019"
+test_direct_debit_accounts:
+  - region: GB (before September 2025)
+    name: David Archer
+    account_number: "40308669"
+    sort_code: "56-00-36"
+  - region: GB (after September 2025)
+    name: Jane Doe
+    account_number: "00012345"
+    sort_code: "10-88-00"
+  - region: Guernsey
+    name: David Archer
+    account_number: "40308669"
+    sort_code: "56-00-36"

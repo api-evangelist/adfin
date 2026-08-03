@@ -1,0 +1,27 @@
+generated: '2026-07-17'
+method: searched
+status: published
+source: https://github.com/Adfin-Engineering/mcp-server-adfin
+server:
+  name: adfin
+  official: true
+  transport: stdio
+  repository: https://github.com/Adfin-Engineering/mcp-server-adfin
+  runtime: python
+  install: "uv run main_adfin_mcp.py (Python 3.10+); configured in claude_desktop_config.json"
+  registry: https://mcpservers.org/servers/Adfin-Engineering/mcp-server-adfin
+  auth:
+    env:
+      - ADFIN_EMAIL
+      - ADFIN_PASSWORD
+  notes: >-
+    Dynamically imports the latest Adfin API documentation from
+    https://app.adfin.com/api/docs/Public-APIs on launch, so the exposed tool
+    surface tracks the live API.
+tools:
+  - name: credit_control_status
+    description: Retrieve the account credit control status via the Adfin API.
+  - name: create_invoice
+    description: Generate an invoice with amount, recipient, email, and due date.
+  - name: bulk_invoice_upload
+    description: Process multiple PDF invoices from a local directory.

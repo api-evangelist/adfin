@@ -1,0 +1,40 @@
+generated: '2026-07-17'
+method: searched
+source: https://developer.adfin.com/products/direct-integration/guides/webhooks/webhook-events.md
+type: Webhooks
+transport: HTTPS POST to a subscriber-configured endpoint
+signature:
+  scheme: shared-secret
+  verification: >-
+    Verify the webhook signature against your shared secret before processing.
+    An adfin-webhook-type header identifies the category
+    (biller | customer | invoice | dd-mandate | payment).
+  docs: https://developer.adfin.com/products/direct-integration/guides/webhooks/webhook-signature-verification.md
+delivery:
+  retries: true
+payload_common_fields: [type, eventId, billerId, userId, customerId, invoiceId, paymentId]
+events:
+  - name: BILLER_CREATED
+    category: biller
+  - name: BILLER_PAYMENTS_STATUS_UPDATED
+    category: biller
+  - name: CUSTOMER_CREATED
+    category: customer
+  - name: CUSTOMER_UPDATED
+    category: customer
+  - name: CUSTOMER_DELETED
+    category: customer
+  - name: CUSTOMER_MERGED
+    category: customer
+  - name: INVOICE_CREATED
+    category: invoice
+  - name: INVOICE_ACTIVATED
+    category: invoice
+  - name: INVOICE_DELETED
+    category: invoice
+  - name: DIRECT_DEBIT_MANDATE_INITIATED
+    category: dd-mandate
+  - name: DD_PAYMENT_FAILED
+    category: payment
+  - name: PAYMENT_SENT
+    category: payment

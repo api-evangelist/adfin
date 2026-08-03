@@ -1,0 +1,13 @@
+generated: '2026-07-17'
+method: searched
+source: https://www.npmjs.com/package/@adfin/nodejs
+packages:
+  - language: javascript
+    registry: npm
+    name: "@adfin/nodejs"
+    version: 1.0.1
+    url: https://www.npmjs.com/package/@adfin/nodejs
+    repository: https://github.com/Adfin-Engineering/adfin-nodejs
+    install: npm install @adfin/nodejs
+    description: Adfin API client for Node.js (OAuth2 client-credentials, customers, invoices, payment requests).
+    official: true

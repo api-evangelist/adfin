@@ -1,0 +1,55 @@
+generated: '2026-07-17'
+method: derived
+source: https://developer.adfin.com/products/direct-integration/guides/adfin-core/adfin-core.md
+note: >-
+  Derived from the Adfin Core resource guides (no public OpenAPI to $ref). Field
+  lists are indicative from the docs, not an exhaustive schema.
+entities:
+  - name: Biller
+    description: The merchant/tenant collecting payments through Adfin.
+    endpoints: []
+  - name: Customer
+    description: A customer record with contact details and mandate status.
+    endpoints: ["/customers", "/customers/{id}"]
+    operations: [create, update, list, delete]
+  - name: Invoice
+    description: A bill issued to a customer with line-items, taxes and due dates. Adfin never alters invoice amounts.
+    endpoints: ["/invoices", "/invoices/{id}", "/invoices/activate"]
+    operations: [draft, activate, void, mark-as-paid, list]
+    statuses: [draft, active, paid, void]
+  - name: PaymentRequest
+    description: A demand for funds (one-off, partial, or multi-invoice) that generates a hosted payment link.
+    operations: [draft, activate, cancel, filter, paginate]
+  - name: DirectDebitMandate
+    description: Consent to pull funds from a customer's bank account.
+    endpoints: ["/customers/{id}/directdebitmandates"]
+    operations: [create, cancel]
+  - name: Payment
+    description: A settled or attempted movement of funds against an invoice or payment request.
+  - name: Webhook
+    description: Outbound event subscription for system synchronization.
+relationships:
+  - from: Invoice
+    to: Customer
+    type: belongs_to
+    via: customer
+  - from: PaymentRequest
+    to: Customer
+    type: belongs_to
+    via: customer
+  - from: PaymentRequest
+    to: Invoice
+    type: has_many
+    via: invoices
+  - from: DirectDebitMandate
+    to: Customer
+    type: belongs_to
+    via: customer
+  - from: Payment
+    to: Invoice
+    type: belongs_to
+    via: invoice
+  - from: Customer
+    to: Biller
+    type: belongs_to
+    via: biller

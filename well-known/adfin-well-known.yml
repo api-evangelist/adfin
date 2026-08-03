@@ -1,0 +1,32 @@
+generated: '2026-07-17'
+method: searched
+source: live probes of Adfin hosts (auth/api/console/developer)
+notes: >-
+  Only auth.adfin.com serves real JSON discovery documents (Auth0-backed
+  identity). api.adfin.com, console.adfin.com and app.adfin.com return the SPA
+  HTML shell for any /.well-known path (catch-all 200s, not real documents), so
+  those are recorded as not-present. adfin.com/.well-known/security.txt is 404.
+hosts:
+  - host: https://auth.adfin.com
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: adfin-auth-openid-configuration.json
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: adfin-auth-oauth-authorization-server.json
+  - host: https://adfin.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://api.adfin.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        note: SPA HTML shell, not a real RFC 9116 document
+      - path: /.well-known/api-catalog
+        status: 200
+        note: SPA HTML shell, not a real API catalog
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        note: SPA HTML shell, not a real RFC 8414 document

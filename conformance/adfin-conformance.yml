@@ -1,0 +1,24 @@
+generated: '2026-07-17'
+method: searched
+source: https://developer.adfin.com/docs/welcome
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: OAuth 2.0 client-credentials + authorization-code flows documented; api/oauth2/token endpoint.
+  - id: oidc
+    conforms: true
+    evidence: auth.adfin.com publishes a real /.well-known/openid-configuration (Auth0-backed identity).
+  - id: tls
+    conforms: true
+    evidence: TLSv1.3 with HSTS (see security/adfin-domain-security.yml).
+  - id: pci-dss
+    conforms: true
+    evidence: >-
+      Docs describe PCI-DSS scope reduction via hosted payment pages; card
+      processing brokered through Adyen (checkoutshopper-live.adyen.com).
+  - id: webhook-signatures
+    conforms: true
+    evidence: Shared-secret signature verification documented for all webhook events.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No public OpenAPI / problem+json envelope confirmed.
