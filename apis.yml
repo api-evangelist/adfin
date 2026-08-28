@@ -10,6 +10,17 @@ description: >-
   (client-credentials for platforms, authorization-code for biller
   authorization), with an official Node.js SDK and a first-party MCP server for
   agent-driven invoicing. Adfin is a portfolio company of Index Ventures.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
