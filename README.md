@@ -64,6 +64,109 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Adfin is a company surfaced as a portfolio company of index-ventures and added to the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting the enrichment pipeline.
+Adfin is a London-based fintech that combines payment collection and AI-powered credit control so businesses get paid faster. Its developer platform exposes invoicing, payments and credit-control APIs — create and activate invoices, issue payment requests with hosted payment pages, set up direct-debit mandates, and reconcile payments — plus signed webhooks for real-time invoice, mandate and payment events. Authentication is OAuth 2.0 (client-credentials for platforms, authorization-code for biller authorization), with an official Node.js SDK and a first-party MCP server for agent-driven invoicing. Adfin is a portfolio company of Index Ventures.
 
-Source: portfolio company of [index-ventures](https://github.com/api-evangelist/index-ventures) — http://adfin.com
+**Areas:** Company · Fintech · Payments · Invoicing · Credit Control · Direct Debit · Billing · Accounts Receivable · United Kingdom
+
+## Adfin on APIs.io
+
+Everything profiled for Adfin is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/adfin/](https://apis.io/providers/adfin/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Adfin API](https://apis.io/apis/adfin/adfin-api/) — Invoicing, payments and credit-control API — customers, invoices, payment requests, direct-debit mandates, payments and signed webhooks.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Adfin Webhooks](https://apis.io/asyncapis/adfin/adfin-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [adfin](https://apis.io/servers/adfin/adfin/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Adfin Authentication](https://apis.io/security/adfin/adfin-authentication/)
+- [Adfin Domain Security](https://apis.io/security/adfin/adfin-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://adfin.com)
+- [Documentation](https://developer.adfin.com/docs/welcome)
+- [Getting started](https://developer.adfin.com/products/direct-integration/guides/get-started/1_get-access)
+- [API reference](https://developer.adfin.com/reference/welcome-1)
+- [Pricing](https://adfin.com/pricing)
+- [Sign up](https://console.adfin.com/auth/signup)
+- [Support](https://support.adfin.com/en/)
+- [Changelog](https://developer.adfin.com/changelog)
+- [Blog](https://adfin.com/blog)
+- [Terms of service](https://adfin.com/terms-of-service)
+- [Privacy policy](https://adfin.com/privacy-policy)
+- [GitHub](https://github.com/Adfin-Engineering)
+
+## API Evangelist rating
+
+**Kin Score 43.0** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 54.8 |
+| Access clarity | 38.2 |
+
+**Agent readiness 39.1** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | documented (partial credit) |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 29.5** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/adfin/](https://apis.io/providers/adfin/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Adfin: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/adfin/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
