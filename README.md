@@ -99,6 +99,19 @@ Authentication, trust centre, and vulnerability disclosure.
 - [Adfin Authentication](https://apis.io/security/adfin/adfin-authentication/)
 - [Adfin Domain Security](https://apis.io/security/adfin/adfin-domain-security/)
 
+#### Plans and pricing (2)
+
+Published plans, tiers and prices.
+
+- [Adfin Plans Pricing](https://apis.io/plans/adfin/adfin-plans-pricing/)
+- [Adfin Price Estimates](https://apis.io/plans/adfin/adfin-price-estimates/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Adfin Finops](https://apis.io/finops/adfin/adfin-finops/)
+
 ## Where to find this API
 
 Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
@@ -118,18 +131,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 43.0** — developing · rubric 0.25.0 · scored 2026-10-23
+**Kin Score 46.8** — developing · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 75.0 |
 | Contract quality | 39.0 |
 | Contract governance | 18.2 |
-| Operational transparency | 26.3 |
+| Operational transparency | 26.2 |
 | Developer ergonomics | 54.8 |
-| Access clarity | 38.2 |
+| Access clarity | 61.7 |
 
-**Agent readiness 39.1** — agent-ready (gated down from agent-native)
+**Agent readiness 38.2** — agent-ready
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -154,8 +167,12 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Agentic Commerce | — |
 | Pagination Ratio | na |
 | Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 29.5** — Payments
+**Regulatory alignment 24.1** — Payments
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/adfin/](https://apis.io/providers/adfin/).
 
